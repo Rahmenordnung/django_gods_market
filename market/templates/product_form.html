@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Ich brauche dass zu tun...</h1>
+    
+    <form method="POST">
+        
+        {% csrf_token %}
+        
+        <label for="prod_name">Product Name</label><br>
+        <input type="text" id="prod_name" name="name" /><br>
+        
+        <label for="prod_done">Done</label><br>
+        <input type="checkbox" id="prod_done" name="done" /><br>
+        <br>
+        <button type="submit">Save</button>
+        
+        
+    </form>
+    
+</body>
+</html>

@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from market.views import get_market_list
+from market.views import get_market_list,create_a_product,edit_product_values,toggle_product
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', get_market_list)
+    url(r'^$', get_market_list),
+    url(r'^add$',create_a_product),
+    url(r'^edit/(?P<id>\d+)$',edit_product_values),
+    url(r'^toggle/(?P<id>\d+)$',toggle_product),
+    
+    
 ]
